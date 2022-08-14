@@ -1,12 +1,11 @@
 
 
-out/hello.html: | out
-	echo $(@F)
+out/hello.js: | out
 	emcc src/$(basename $(@F)).c -s WASM=1 -o $@
 
 out: 
-	mkdir out
+	@mkdir out
 
 .PHONY: clean
 clean:
-	${RM} *.js *.wasm *.html
+	${RM} -rf out

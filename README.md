@@ -9,10 +9,12 @@ $ ./emsdk activate latest
 $ source emsdk_env.sh
 ```
 
+### Building
 ```console
-$ emcc hello.c -s WASM=1 -o hello.html
+$ make out/hello.html
 ```
 
+### Running
 ```console
-$ node hello.js
+$ node out/hello.js
 ```
